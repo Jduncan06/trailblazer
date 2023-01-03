@@ -1,17 +1,18 @@
-import {Routes, Route } from 'react-router-dom';
-import './App.css';
-import Header from './components/Header';
-import Home from './pages/Home';
-import Account from '.pages/Account'
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Header from "./components/Header";
+import HomePage from "./pages/HomePage";
+import AccountPage from ".pages/AccountPage";
 
 function App() {
   return (
-   <Header/>
-   <Routes>
-   <Route path='/' element={<Home/>}/>
-   <Route path='Account' element={<Account/>} />
-   
-   </Routes>
+    <div className="app">
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="Account" element={<Account />} />
+      </Routes>
+    </div>
   );
 }
 
